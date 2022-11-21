@@ -1,3 +1,28 @@
 .filename {
+    max-width: 60rem;
+    width: 100%;
+    margin-top: 1.5rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input {
+        flex-grow: 1;
+        height: 1.5rem;
+        margin: auto 1rem;
+        border-radius: 0.4rem;
+        transition: box-shadow 0.2s;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            box-shadow: 0.1rem 0.3rem 0.3rem #e6dcdc;
+        }
+    }
+
+    div {
+        font-weight: bold;
+    }
 }

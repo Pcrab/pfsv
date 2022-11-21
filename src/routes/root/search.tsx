@@ -1,17 +1,18 @@
-import { useState } from "react";
+import { useContext } from "react";
 import translate from "../../utils/translate.js";
+import { RootContext } from "./index.js";
 import "./search.scss";
 
 const Search = () => {
-    const [searchWord, setSearchWord] = useState("");
+    const rootContext = useContext(RootContext);
 
     return (
         <div className="search">
             <input
                 type="text"
-                value={searchWord}
+                value={rootContext.searchUrl}
                 onChange={(e) => {
-                    setSearchWord(e.target.value);
+                    rootContext.setSearchUrl(e.target.value);
                 }}
             />
             <div>{translate("search")}</div>
