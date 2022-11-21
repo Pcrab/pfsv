@@ -7,7 +7,7 @@ const withSidebar = (element: ReactElement, current: pageName) => {
         return (
             <>
                 <Sidebar current={current} />
-                {element}
+                <div className="main">{element}</div>
             </>
         );
     };

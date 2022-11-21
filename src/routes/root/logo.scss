@@ -1,13 +1,11 @@
-.root {
-    .logo {
-        cursor: pointer;
-        width: 100%;
-        margin: 15% auto 0;
-        text-align: center;
+.logo {
+    cursor: pointer;
+    margin: 15% auto 0;
+    text-align: center;
 
-        img {
-            width: 30%;
-            max-width: 12rem;
-        }
+    img {
+        min-width: 8rem;
+        width: 30%;
+        max-width: 12rem;
     }
 }

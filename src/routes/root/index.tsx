@@ -7,12 +7,12 @@ import "./index.scss";
 
 const Root = () => {
     return (
-        <div className="root">
+        <>
             <Logo />
             <Search />
             <Filename />
             <Download />
-        </div>
+        </>
     );
 };
 
