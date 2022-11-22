@@ -6,15 +6,20 @@ import Filename from "./filename.js";
 import Download from "./download.js";
 
 const file = {
-    searchUrl: "",
-    setSearchUrl: (url: string) => {
-        url;
-        return;
+    searchUrl: {
+        value: "",
+        set: (url: string) => {
+            url;
+            return;
+        },
     },
-    filename: "",
-    setFilename: (filename: string) => {
-        filename;
-        return;
+
+    filename: {
+        value: "",
+        set: (filename: string) => {
+            filename;
+            return;
+        },
     },
 };
 
@@ -27,10 +32,14 @@ const Root = () => {
     return (
         <RootContext.Provider
             value={{
-                searchUrl,
-                setSearchUrl,
-                filename,
-                setFilename,
+                searchUrl: {
+                    value: searchUrl,
+                    set: setSearchUrl,
+                },
+                filename: {
+                    value: filename,
+                    set: setFilename,
+                },
             }}
         >
             <Logo />

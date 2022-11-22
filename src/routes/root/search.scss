@@ -52,6 +52,7 @@
         text-align: center;
         border-radius: 0.5rem;
         transition: box-shadow 0.2s;
+        cursor: pointer;
         top: calc(($search-height - $height) / 2 - $padding-top);
 
         &:hover {

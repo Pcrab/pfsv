@@ -11,12 +11,11 @@ const Filename = () => {
             <div>{translate("filename")}</div>
             <input
                 type="text"
-                value={rootContext.filename}
+                value={rootContext.filename.value}
                 onChange={(e) => {
-                    rootContext.setFilename(e.target.value);
+                    rootContext.filename.set(e.target.value);
                 }}
             />
-            <div>{translate("confirm")}</div>
         </div>
     );
 };

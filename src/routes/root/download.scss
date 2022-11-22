@@ -1,0 +1,39 @@
+.download {
+    $dark: #674848;
+    $light: #fff9f9;
+
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 1.5rem;
+    color: $dark;
+    font-weight: bold;
+    align-items: center;
+
+    .icons {
+        display: flex;
+
+        .icon {
+            cursor: pointer;
+            height: 1.5rem;
+            padding: 0.2rem 0.5rem;
+            margin: 0.5rem;
+            border-radius: 0.4rem;
+            border: 0.15rem solid #674848;
+        }
+    }
+
+    .confirm {
+        background-color: $dark;
+        color: $light;
+        padding: 0.3em 0.6em;
+        border-radius: 0.5em;
+        font-size: 1.6rem;
+        margin-top: 1.5rem;
+        cursor: pointer;
+        transition: box-shadow 0.2s;
+
+        &:hover {
+            box-shadow: 0 0 0.3rem #4b3232;
+        }
+    }
+}

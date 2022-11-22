@@ -10,9 +10,9 @@ const Search = () => {
         <div className="search">
             <input
                 type="text"
-                value={rootContext.searchUrl}
+                value={rootContext.searchUrl.value}
                 onChange={(e) => {
-                    rootContext.setSearchUrl(e.target.value);
+                    rootContext.searchUrl.set(e.target.value);
                 }}
             />
             <div>{translate("search")}</div>
