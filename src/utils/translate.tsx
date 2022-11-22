@@ -27,15 +27,13 @@ const translations: {
 } as const;
 
 const defaultLanguage: keyof primaryTranslateText = "english";
-const translate = (text: keyof typeof translations): string => {
+const translate = (text: translateKeys): string => {
     let currentLanguage = localStorage.getItem("language");
-    if (!currentLanguage) {
-        currentLanguage = defaultLanguage;
-        localStorage.setItem("language", defaultLanguage);
-    }
     const currentLanguageTranslation =
         translations[text][currentLanguage as keyof translateText];
     if (!currentLanguageTranslation) {
+        currentLanguage = defaultLanguage;
+        localStorage.setItem("language", defaultLanguage);
         return translations[text][defaultLanguage];
     }
     return currentLanguageTranslation;
